@@ -1,0 +1,60 @@
+package:
+  name: cogent
+  version: !!str 1.5.3
+
+source:
+  fn: cogent-1.5.3.tgz
+  url: https://pypi.python.org/packages/source/c/cogent/cogent-1.5.3.tgz
+  md5: ecdfa0bc89e0c04c9d4d39cac9984498
+
+requirements:
+  build:
+    - python
+    - numpy
+
+  run:
+    - python
+    - numpy
+    - zlib
+    - matplotlib
+    - mpi4py
+    - sqlalchemy
+    - mysql-python # it seems that mysql-connector-python would be better but I can't build it
+
+test:
+  # Python imports
+  imports:
+    - cogent
+    - cogent.align
+    - cogent.align.weights
+    - cogent.app
+    - cogent.cluster
+    - cogent.core
+    - cogent.data
+    - cogent.db
+    - cogent.db.ensembl
+    - cogent.draw
+    - cogent.evolve
+    - cogent.format
+    - cogent.maths
+    - cogent.maths.matrix
+    - cogent.maths.spatial
+    - cogent.maths.stats
+    - cogent.maths.stats.cai
+    - cogent.maths.unifrac
+    - cogent.motif
+    - cogent.parse
+    - cogent.phylo
+    - cogent.recalculation
+    - cogent.seqsim
+    - cogent.struct
+    - cogent.util
+
+about:
+  home: http://www.pycogent.org
+  license:  GNU General Public License (GPL)
+  summary: 'COmparative GENomics Toolkit'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

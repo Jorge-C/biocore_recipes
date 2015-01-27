@@ -1,0 +1,29 @@
+package:
+  name: qcli
+  version: !!str 0.1.1
+
+source:
+  fn: qcli-0.1.1.tar.gz
+  url: https://pypi.python.org/packages/source/q/qcli/qcli-0.1.1.tar.gz
+  md5: 25b7bc209c1e52be16efad295bd37ed4
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - qcli
+
+about:
+  home: UNKNOWN
+  license: UNKNOWN
+  summary: 'UNKNOWN'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

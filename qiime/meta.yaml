@@ -1,0 +1,70 @@
+package:
+  name: qiime
+  version: !!str 1.9.0.dev
+
+source:
+  git_url: https://github.com/biocore/qiime.git
+  git_branch: master
+
+build:
+  preserve_egg_dir: True
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy >=1.9.0
+    #- burrito <1.0.0
+    #- pandas >=0.13.1
+    #- burrito-fillings >=0.1.0,<0.2.0
+    #- matplotlib >=1.1.0
+    #- pynast ==1.2.2
+    #- qcli >=0.1.1,<0.2.0
+    #- gdata
+    #- biom-format >=2.1.2,<2.2.0
+    #- emperor >=0.9.5,<1.0.0
+    #- qiime-default-reference >=0.1.1,<0.2.0
+
+  run:
+    - python
+    - setuptools
+    - numpy >=1.9.0
+    - scipy >=0.14.0
+    - matplotlib >=1.1.0
+    - pynast ==1.2.2
+    - qcli >=0.1.1,<0.2.0
+    - gdata
+    - biom-format >=2.1.2,<2.2.0
+    - emperor >=0.9.5,<1.0.0
+    - scikit-bio >=0.2.2,<3.0.0
+    - burrito-fillings >=0.1.0,<0.2.0
+    - pandas >=0.13.1
+    - burrito <1.0.0
+    - qiime-default-reference >=0.1.1,<0.2.0
+
+test:
+  # Python imports
+  imports:
+    - qiime
+
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+    - print_qiime_config.py -t
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://www.qiime.org
+  license: GPL
+  summary: 'Quantitative Insights Into Microbial Ecology'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,35 @@
+package:
+  name: burrito-fillings
+  version: !!str 0.1.0
+
+source:
+  fn: burrito-fillings-0.1.0.tar.gz
+  url: https://pypi.python.org/packages/source/b/burrito-fillings/burrito-fillings-0.1.0.tar.gz
+  md5: dc9510d5ae5728fa7cb0672449051ece
+
+requirements:
+  build:
+    - python
+    - setuptools
+    #- scikit-bio >=0.2.1,<0.3.0
+    #- burrito <1.0.0
+
+  run:
+    - python
+    - scikit-bio >=0.2.1,<0.3.0
+    - burrito <1.0.0
+
+test:
+  # Python imports
+  imports:
+    - bfillings
+    - bfillings.tests
+
+about:
+  home: https://github.com/biocore/burrito-fillings
+  license:  BSD License
+  summary: 'burrito-fillings: burrito application controllers for bioinformatics'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,35 @@
+package:
+  name: emperor
+  version: !!str 0.9.5
+
+source:
+  fn: emperor-0.9.5.tar.gz
+  url: https://pypi.python.org/packages/source/e/emperor/emperor-0.9.5.tar.gz
+  md5: a6ea40b74d5267b54a03cddb9f191139
+
+requirements:
+  build:
+    - python
+    #- numpy >=1.7
+    #- qcli
+    #- scikit-bio >=0.2.1,<3.0.0
+
+  run:
+    - python
+    - numpy >=1.7
+    - qcli
+    - scikit-bio >=0.2.1,<3.0.0
+
+test:
+  # Python imports
+  imports:
+    - emperor
+
+about:
+  home: http://github.com/biocore/emperor
+  license:  BSD License
+  summary: 'Emperor'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

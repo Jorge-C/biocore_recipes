@@ -1,0 +1,32 @@
+package:
+  name: qiime-default-reference
+  version: !!str 0.1.1
+
+source:
+  fn: qiime-default-reference-0.1.1.tar.gz
+  url: https://pypi.python.org/packages/source/q/qiime-default-reference/qiime-default-reference-0.1.1.tar.gz
+  md5: 64af92c59c1f8a8c9afbafc6992f49d0
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - qiime_default_reference
+    - qiime_default_reference.gg_13_8_otus
+    - qiime_default_reference.tests
+
+about:
+  home: http://www.qiime.org
+  license: CC BY-SA 3.0
+  summary: 'Default reference data files for use with QIIME.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
