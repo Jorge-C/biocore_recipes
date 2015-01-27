@@ -41,7 +41,16 @@ $ conda update conda conda-build patchelf
 ```
 
 ```
-$ conda build qiime
+$ conda build --numpy 1.9 cogent
+$ conda build --numpy 1.9 pynast
+$ conda build --numpy 1.9 qcli
+$ conda build --numpy 1.9 pyqi
+$ conda build --numpy 1.9 emperor
+$ conda build --numpy 1.9 biom-format
+$ conda build --numpy 1.9 burrito-fillings
+$ conda build --numpy 1.9 burrito
+$ conda build --numpy 1.9 qiime-default-reference
+$ conda build --numpy 1.9 qiime
 ```
 
 # Sharing packages
