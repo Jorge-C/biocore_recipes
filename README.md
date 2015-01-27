@@ -44,6 +44,8 @@ $ conda update conda conda-build patchelf
 $ conda build qiime
 ```
 
+# Sharing packages
+
 If registered in binstar (like PyPI, for conda builds) and logged in
 (`$ binstar login`), the build command will give, if successful, a
 command to update the binary package. It can be done automatically by
