@@ -47,6 +47,31 @@ $ conda build qiime
 # Sharing packages
 
 If registered in binstar (like PyPI, for conda builds) and logged in
-(`$ binstar login`), the build command will give, if successful, a
-command to update the binary package. It can be done automatically by
-configuring `conda config --set binstar_upload yes`.
+the build command will give, if successful, a command to update the
+binary package. It can be done automatically by configuring `conda
+config --set binstar_upload yes`. For example,
+
+
+```
+$ conda install binstar
+$ binstar login
+$ binstar upload ...pck-x.y.z-py27_0.tar.bz2
+```
+
+# Testing
+
+Let's test if installing works by creating a new, clean environment
+and installing it from binstar
+
+```
+$ conda create -n test_env python
+$ source activate test_env
+(test_env)$ conda install -c https://conda.binstar.org/jorge mypkg
+```
+
+# Common issues
+
+An error like `ImportError: /lib64/libc.so.6: version `GLIBC_2.14' not
+found ...` means that you're trying to install a package built in a
+newer machine in another one with an older GLIBC. If you intend to
+distribute it, try building it in an oldish machine.
