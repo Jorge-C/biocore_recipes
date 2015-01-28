@@ -19,7 +19,9 @@ requirements:
     - matplotlib
     - mpi4py
     - sqlalchemy
-    - mysql-python # it seems that mysql-connector-python would be better but I can't build it
+    # - mysql-python (mysql-connector-python would be better (once
+    # another cogent is ever released). But this is optional and not
+    # really used by QIIME.)
 
 test:
   # Python imports
