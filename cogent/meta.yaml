@@ -18,7 +18,7 @@ requirements:
     - zlib
     - matplotlib
     - mpi4py
-    - sqlalchemy
+    # - sqlalchemy
     # - mysql-python (mysql-connector-python would be better (once
     # another cogent is ever released). But this is optional and not
     # really used by QIIME.)
@@ -33,8 +33,8 @@ test:
     - cogent.cluster
     - cogent.core
     - cogent.data
-    - cogent.db
-    - cogent.db.ensembl
+    #- cogent.db  # Fail because we don't install mysql
+    #- cogent.db.ensembl  # Same
     - cogent.draw
     - cogent.evolve
     - cogent.format
